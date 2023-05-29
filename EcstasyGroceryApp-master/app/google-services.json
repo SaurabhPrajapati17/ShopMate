@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "989897462079",
+    "project_id": "shopmate-4c0e0",
+    "storage_bucket": "shopmate-4c0e0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989897462079:android:1d1db6efd4b5f9312ac38a",
+        "android_client_info": {
+          "package_name": "com.example.ecstasygroceryapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx0GsLqquYP3g58fxaGrNR7F8SJmhQUCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

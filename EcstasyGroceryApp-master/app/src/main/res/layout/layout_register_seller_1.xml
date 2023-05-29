@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_sell1"
+    android:orientation="vertical"
+    android:padding="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        style="@style/loginHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:alpha=".8"
+        android:fontFamily="@font/poppins_medium"
+        android:text="ShopMate"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:id="@+id/profileIv"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_store_grey"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/textview_shape_transparent"
+        android:padding="1dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputShopName"
+        android:alpha=".6"
+        android:layout_marginTop="50dp"
+        style="@style/parent">
+
+        <EditText
+            android:id="@+id/shopNameEt"
+            style="@style/modifiedEditText"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Enter Shop Name"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputDeliveryDee"
+        android:alpha=".6"
+        style="@style/parent">
+
+        <EditText
+            android:id="@+id/deliveryFeeEt"
+            style="@style/modifiedEditText"
+            android:fontFamily="@font/poppins_light"
+            android:hint="Enter Delivery Fee"
+            android:inputType="phone"
+            android:maxLines="1"
+            android:textSize="12sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:id="@+id/fabStep1Complete"
+        style="@style/loginButton"
+        android:backgroundTint="@color/purple_200"
+        android:src="@drawable/ic_next_orange"
+        android:layout_marginTop="50dp"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardElevation="3dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/shopInfo"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/profileLl"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileIv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_person_grey"
+                app:civ_border_color="@color/primaryTextColor"
+                app:civ_border_width="1dp" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/poppins_light"
+                android:text="Name"
+                android:textColor="@color/primaryTextColor"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileLl"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:numStars="5" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileLl"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/ratingBar"
+            android:fontFamily="@font/poppins_light"
+            android:text="dd/mm/yyyy"
+            android:textColor="@color/colorGrey02"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/reviewTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateTv"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_light"
+            android:text="The original Review of the User"
+            android:textColor="@color/colorBlack"
+            android:textSize="12sp" />
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

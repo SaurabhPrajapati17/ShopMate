@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/headerLl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/drawer_gradient_header">
+
+            <TextView
+                android:id="@+id/orderText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Order To"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/shopNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/textview_shape"
+                android:fontFamily="@font/poppins_light"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="Shop Name"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/shopNameTv"
+                android:background="@color/colorGrey00" />
+
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartItemsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:padding="5dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_cartitem" />
+
+        <RelativeLayout
+            android:id="@+id/pricesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <RelativeLayout
+                android:id="@+id/promoRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_rect02"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/promoLabelTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="5dp"
+                    android:text="Promotion Code"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/promoCodeEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/promoLabelTv"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toStartOf="@+id/validateBtn"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Promo Code"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey01"
+                    android:textSize="10sp" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/validateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/promoLabelTv"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_next_blue"
+                    android:tint="@color/colorWhite"
+                    app:fabSize="mini" />
+
+                <TextView
+                    android:id="@+id/promoDescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/promoCodeEt"
+                    android:fontFamily="@font/poppins_light"
+                    android:hint="Promo Code Description"
+                    android:padding="10dp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorGrey01"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/applyBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/promoDescriptionTv"
+                    android:text="Apply"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/sTotalLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/promoRl"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="Sub Total:"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/sTotalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/promoRl"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/textview_shape"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="$12"
+                android:textColor="@color/black"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/discountLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sTotalLabelTv"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="Discount :"
+                android:textColor="@color/black"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/discountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sTotalLabelTv"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/textview_shape"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="$12"
+                android:textColor="@color/black"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/dFeeLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountLabelTv"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="Delivery Fee:"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/dFeeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discountLabelTv"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/textview_shape"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="$12"
+                android:textColor="@color/colorBlack"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/totalLabelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dFeeLabelTv"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:padding="5dp"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="Total Price"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/totalTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dFeeLabelTv"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/textview_shape"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingTop="2dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="2dp"
+                android:text="$22"
+                android:textColor="@color/colorBlack"
+                android:textSize="8sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/finalPriceText"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/drawer_gradient_header"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <TextView
+                android:id="@+id/checkoutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/textview_shape"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_horizontal"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="5dp"
+                android:text="Confirm Order"
+                android:textSize="10sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
