@@ -116,7 +116,7 @@ public class EditProductActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         TextView textView = (TextView) toolbar.findViewById(R.id.toolbarTextView);
-        textView.setText("Ecstasy Business");
+        textView.setText("ShopMate Business");
 
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
